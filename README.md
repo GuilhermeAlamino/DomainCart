@@ -22,8 +22,6 @@ A documentação registra as decisões e seus limites. A implementação busca r
 
 ![Diagrama de domínio do DomainCart](docs/assets/diagrama-dominio.jpg)
 
-*Diagrama do domínio — adicionar a imagem final em `docs/assets/diagrama-dominio.png`.*
-
 [**Como o domínio foi modelado →**](docs/modelagem-do-dominio.md)
 
 ## O que foi modelado
@@ -62,8 +60,6 @@ Os testes automatizados exercitam as responsabilidades
 das entidades e as restrições comerciais implementadas.
 
 ![Relatório de cobertura de código do DomainCart](docs/assets/cobertura-testes.png)
-
-*Relatório de cobertura — substituir pela captura real e identificar a métrica (por exemplo, cobertura de linhas). Cobertura não significa ausência de defeitos.*
 
 Execute os testes:
 
