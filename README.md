@@ -1,5 +1,6 @@
 # DomainCart
 
+[![Quality](https://github.com/GuilhermeAlamino/DomainCart/actions/workflows/quality.yml/badge.svg)](https://github.com/GuilhermeAlamino/DomainCart/actions/workflows/quality.yml)
 ![PHP](https://img.shields.io/badge/PHP-8.2-777BB4?logo=php&logoColor=white)
 ![PSR-12](https://img.shields.io/badge/PSR--12-blue)
 ![PHPStan](https://img.shields.io/badge/PHPStan-Level%209-blue)
