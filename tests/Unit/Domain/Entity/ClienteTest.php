@@ -15,11 +15,15 @@ final class ClienteTest extends TestCase
 {
     public function testDeveCriarClienteComDadosValidos(): void
     {
+        $email = new Email('cliente@email.com');
+
         $cliente = $this->criarCliente(
-            nome: 'Guilherme Alamino'
+            nome: 'Guilherme Alamino',
+            email: $email
         );
 
         $this->assertInstanceOf(Cliente::class, $cliente);
+        $this->assertSame($email, $cliente->email());
         $this->assertTrue($cliente->intoleranciaLactose());
     }
 

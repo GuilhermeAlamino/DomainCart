@@ -23,6 +23,7 @@ final class EmailTest extends TestCase
             $objeto = new Email($email);
 
             $this->assertInstanceOf(Email::class, $objeto);
+            $this->assertSame(trim($email), $objeto->email());
         }
     }
 

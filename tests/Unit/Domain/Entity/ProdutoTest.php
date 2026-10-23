@@ -15,6 +15,7 @@ final class ProdutoTest extends TestCase
         $produto = $this->criarProduto();
 
         $this->assertInstanceOf(Produto::class, $produto);
+        $this->assertSame('Leite integral de 1 litro.', $produto->descricao());
         $this->assertSame(10, $produto->quantidadeEmEstoque());
         $this->assertSame(2500, $produto->valor());
         $this->assertSame(0, $produto->idadeMinima());
