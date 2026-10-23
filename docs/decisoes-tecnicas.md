@@ -269,8 +269,10 @@ O projeto utiliza as seguintes tecnologias:
 | Tecnologia | Responsabilidade |
 |---|---|
 | PHP 8.2 | Linguagem utilizada na implementação do domínio |
-| Composer | Gerenciamento de dependências e suporte ao carregamento automático de classes |
+| Composer | Gerenciamento de dependências e carregamento automático de classes conforme a PSR-4 |
 | PHPUnit 11 | Framework de testes automatizados |
+| PHPStan (nível 9) | Análise estática para identificar inconsistências e problemas de tipagem |
+| PHP_CodeSniffer | Verificação da conformidade do código com a PSR-12 |
 
 As instruções de instalação e execução ficam concentradas no [README](../README.md), evitando sua duplicação neste documento.
 
