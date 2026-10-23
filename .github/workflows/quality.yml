@@ -1,0 +1,41 @@
+
+name: Quality
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Code Quality
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: mbstring, dom, xml, xmlwriter
+          coverage: none
+          tools: composer:v2
+
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: Validate PSR-4
+        run: composer dump-autoload --optimize --strict-psr
+
+      - name: Validate PSR-12
+        run: ./vendor/bin/phpcs --standard=PSR12 src tests
+
+      - name: Static analysis - PHPStan
+        run: ./vendor/bin/phpstan analyse --no-progress
+
+      - name: Unit tests - PHPUnit
+        run: ./vendor/bin/phpunit tests/
